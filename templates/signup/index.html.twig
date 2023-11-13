@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SIGN UP{% endblock %}
+
+{% block body %}
+
+    {% for message in app.flashes('exito') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {{ form(form)}}
+    ¿Ya tienes una cuenta? <a href="index.html" class="text-primary">Accede a Stockify</a>
+{% endblock %}
